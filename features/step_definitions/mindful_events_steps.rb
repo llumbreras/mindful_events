@@ -1,7 +1,7 @@
 Given(/^there are no mindful events scheduled today$/) do
 end
 
-When(/^I go to the scheduled mindful event display page$/) do
+When(/^I go to the scheduled mindful events display page$/) do
     visit scheduled_today_mindful_events_url 
 end
 
@@ -10,11 +10,16 @@ Then(/^I should see that there are no mindful events scheduled today$/) do
 end
 
 Given(/^there are some mindful events scheduled today$/) do
-    pending # express the regexp above with the code you wish you had
+end
+
+When(/^I go to the scheduled mindful events display page$/) do
+    visit scheduled_today_mindful_events_url 
 end
 
 Then(/^I should see the scheduled mindful events grouped by status$/) do
-    pending # express the regexp above with the code you wish you had
+  @mindful_events.each do |mindful_event|
+    within(".#{mindful_event.status}") do
+      page.should have_css(".mindful_event", text: mindful_event.location)
 end
 
 
