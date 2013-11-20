@@ -1,9 +1,8 @@
 Given(/^there are no mindful events scheduled today$/) do
-    pending # express the regexp above with the code you wish you had
 end
 
 When(/^I go to the scheduled mindful event display page$/) do
-    pending # express the regexp above with the code you wish you had
+    visit scheduled_today_mindful_events_url 
 end
 
 Then(/^I should see that there are no mindful events scheduled today$/) do

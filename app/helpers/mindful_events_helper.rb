@@ -1,0 +1,2 @@
+module MindfulEventsHelper
+end
