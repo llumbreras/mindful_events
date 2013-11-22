@@ -1,14 +1,14 @@
 Given /^there are no mindful events scheduled today$/ do
 end
 
-Mindful_event = Struct.new(:status, :location)
 
 Given /^there are some mindful events scheduled today$/ do
   @mindful_events = [
+    Mindful_event.new("not_started", "San Francisco"),
     Mindful_event.new("not_started", "San Jose"),
-    Mindful_event.new("not_started", "Santa Cruz"),
-    Mindful_event.new("not_started", "Santa Ana"),
-    Mindful_event.new("in_session", "Santa Maria")
+    Mindful_event.new("not_started", "Santa Maria"),
+    Mindful_event.new("in_session", "Santa Ana"),
+    Mindful_event.new("in_session", "Santa Cruz")
   ]
 end
 
