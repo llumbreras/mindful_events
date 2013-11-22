@@ -1,15 +1,15 @@
-There are no mindful events scheduled today
+%h1 There are no mindful events scheduled today
 
 %section.mindful_event.not_started
   %header
     %h2 Not Started
     %ul
-      %li.mindful_event Santa Cruz
-      %li.mindful_event San Jose
-      %li.mindful_event Santa Ana
+      - @mindful_events.not_started do |mindful_event|
+        %li.mindful_event=mindful_event.location
 %section.mindful_event.in_session
   %header
     %h2 In Session
     %ul
-      %li.mindful_event Santa Maria
+      - @mindful_events.in_session do |mindful_event|
+        %li.mindful_event=mindful_event.location
         
